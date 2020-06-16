@@ -1,9 +1,9 @@
-<form class="example-form" [formGroup]="signInForm" novalidate>
+<form class="example-form" [formGroup]="signUpForm" novalidate>
     <mat-form-field class="example-full-width">
       <mat-label>Your Email</mat-label>
       <input matInput class="form-control" #userEmail formControlName="userEmail">
       <div class="alert alert-danger"
-                            *ngIf="signInForm.controls['userEmail'].invalid && signInForm.controls['userEmail'].touched">
+                            *ngIf="signUpForm.controls['userEmail'].invalid && signUpForm.controls['userEmail'].touched">
                             Incorrect email
                         </div>
     </mat-form-field>
@@ -14,7 +14,7 @@
     </mat-form-field>
     <br>
     <div class="formGroup">
-      <input type="button" class="btn btnPrimary" value="Sign In" (click)="authService.SignIn(userEmail.value, userPassword.value)">
+      <input type="button" class="btn btnPrimary" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPassword.value)">
     </div>
     
   </form>

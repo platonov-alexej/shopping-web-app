@@ -3,15 +3,15 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from  '../auth/auth.service';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.css']
 })
-export class SignInComponent {
+export class SignUpComponent {
 
-  signInForm: FormGroup;
+  signUpForm: FormGroup;
   constructor(public  authService:  AuthService) {
-    this.signInForm = new FormGroup({
+    this.signUpForm = new FormGroup({
               
       "userEmail": new FormControl ("", [
                           Validators.required, 
@@ -20,5 +20,6 @@ export class SignInComponent {
       "userPassword": new FormControl() 
     });
    }
+
 
 }
